@@ -10,17 +10,17 @@ This is a React TypeScript starter template built with Vite and styled with Tail
 
 ```bash
 # Development
-pnpm dev          # Start dev server on http://localhost:5173
+bun dev          # Start dev server on http://localhost:5173
 
 # Building
-pnpm build        # Type-check and build for production
-pnpm preview      # Preview production build
+bun build        # Type-check and build for production
+bun preview      # Preview production build
 
 # Code Quality
-pnpm lint         # Run ESLint
-pnpm typecheck    # Run TypeScript type checking
-pnpm format       # Format code with Prettier
-pnpm format:check # Check code formatting
+bun lint         # Run ESLint
+bun typecheck    # Run TypeScript type checking
+bun format       # Format code with Prettier
+bun format:check # Check code formatting
 ```
 
 ## Architecture & Key Patterns
@@ -51,6 +51,6 @@ import { cn } from '@/lib/utils'
 ## Important Notes
 
 - **No test framework is configured** - If tests are needed, consider adding Vitest for compatibility with Vite
-- Always run `pnpm typecheck` and `pnpm lint` before considering changes complete
+- Always run `bun typecheck` and `bun lint` before considering changes complete
 - The project uses ESM modules (note `"type": "module"` in package.json)
-- When adding new shadcn/ui components, use: `pnpm dlx shadcn@latest add [component-name]`
+- When adding new shadcn/ui components, use: `bun dlx shadcn@latest add [component-name]`
