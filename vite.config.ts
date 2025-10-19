@@ -18,6 +18,11 @@ export default defineConfig({
     port: Number(process.env.PORT) || 5173,
     strictPort: false,
     open: false,
+    hmr: false, // Disable HMR - rely on server restarts instead
+    watch: {
+      // Still watch files for compilation
+      ignored: ['**/node_modules/**', '**/.git/**'],
+    },
   },
   optimizeDeps: {
     exclude: ['lucide-react'],
