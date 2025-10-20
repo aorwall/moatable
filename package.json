@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "start": "tsc && vite build && vite preview --port ${PORT:-4173}",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
+    "preview": "NODE_ENV=development tsc && vite build --mode development && vite preview --port ${PORT:-4173}",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css}\"",
     "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css}\"",
     "typecheck": "tsc --noEmit"
