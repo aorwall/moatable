@@ -2,12 +2,14 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig } from 'vite';
 import componentTagger from "@moatless/tagger/vite";
+import inspector from "@moatless/inspector/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    componentTagger()
+    componentTagger(),
+    inspector()
   ],
   resolve: {
     alias: {
