@@ -2,11 +2,15 @@
   "codeExecution": {
     "setupCommands": ["bun install"]
   },
-  "previewConfig": {
-    "serverStartCommands": ["bun run dev"],
-    "buildCommand": "bun run build",
-    "buildOutputDirectory": "dist",
-    "autoReload": true,
-    "startupTimeoutSeconds": 30
-  }
+  "servers": [
+    {
+      "name": "preview",
+      "label": "Preview",
+      "startCommands": ["bun run dev"],
+      "startupTimeoutSeconds": 30,
+      "autoReload": true,
+      "enableInspector": true,
+      "default": true
+    }
+  ]
 }
