@@ -149,6 +149,35 @@ The design system is paramount. Never write custom styles in components - always
    - Match the color space format of existing variables
    - Create proper variants (shadcn outline variants are not transparent by default)
 
+### Design Thinking Process
+
+Before coding any UI, understand the context and commit to a bold aesthetic direction:
+
+1. **Purpose**: What problem does this interface solve? Who uses it?
+2. **Tone**: Pick a clear direction — brutally minimal, maximalist, retro-futuristic, organic/natural, luxury/refined, playful, editorial/magazine, brutalist/raw, art deco/geometric, soft/pastel, industrial/utilitarian, etc. Use these for inspiration but design one true to the aesthetic.
+3. **Constraints**: Technical requirements (framework, performance, accessibility).
+4. **Differentiation**: What makes this unforgettable? What's the one thing someone will remember?
+
+Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work — the key is intentionality, not intensity.
+
+### Frontend Aesthetics Guidelines
+
+- **Typography**: Choose beautiful, unique, interesting fonts. Avoid generic fonts like Arial and Inter. Opt for distinctive, characterful choices. Pair a distinctive display font with a refined body font.
+- **Color & Theme**: Commit to a cohesive aesthetic. Use CSS variables for consistency. Dominant colors with sharp accents outperform timid, evenly-distributed palettes.
+- **Motion**: Use animations for effects and micro-interactions. Prioritize CSS-only solutions for HTML. Use Motion library for React when available. Focus on high-impact moments: one well-orchestrated page load with staggered reveals (animation-delay) creates more delight than scattered micro-interactions. Use scroll-triggering and hover states that surprise.
+- **Spatial Composition**: Unexpected layouts. Asymmetry. Overlap. Diagonal flow. Grid-breaking elements. Generous negative space OR controlled density.
+- **Backgrounds & Visual Details**: Create atmosphere and depth rather than defaulting to solid colors. Add contextual effects and textures matching the overall aesthetic — gradient meshes, noise textures, geometric patterns, layered transparencies, dramatic shadows, decorative borders, custom cursors, grain overlays.
+
+### Anti-Patterns to Avoid
+
+NEVER use generic AI-generated aesthetics:
+- Overused font families (Inter, Roboto, Arial, system fonts)
+- Cliched color schemes (particularly purple gradients on white backgrounds)
+- Predictable layouts and cookie-cutter component patterns
+- Designs that lack context-specific character
+
+Interpret creatively and make unexpected choices that feel genuinely designed for the context. No two designs should look the same. Vary between light and dark themes, different fonts, different aesthetics. Match implementation complexity to the aesthetic vision — maximalist designs need elaborate animations and effects, while minimalist designs need restraint, precision, and careful attention to spacing, typography, and subtle details.
+
 ### Styling Guidelines
 
 - Maximize component reusability
