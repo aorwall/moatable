@@ -158,7 +158,7 @@ Before coding any UI, understand the context and commit to a bold aesthetic dire
 3. **Constraints**: Technical requirements (framework, performance, accessibility).
 4. **Differentiation**: What makes this unforgettable? What's the one thing someone will remember?
 
-Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work — the key is intentionality, not intensity.
+Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work — the key is intentionality, not intensity. All implementations must be production-grade and functional, visually striking and memorable, cohesive with a clear aesthetic point-of-view, and meticulously refined in every detail.
 
 ### Frontend Aesthetics Guidelines
 
@@ -176,7 +176,7 @@ NEVER use generic AI-generated aesthetics:
 - Predictable layouts and cookie-cutter component patterns
 - Designs that lack context-specific character
 
-Interpret creatively and make unexpected choices that feel genuinely designed for the context. No two designs should look the same. Vary between light and dark themes, different fonts, different aesthetics. Match implementation complexity to the aesthetic vision — maximalist designs need elaborate animations and effects, while minimalist designs need restraint, precision, and careful attention to spacing, typography, and subtle details.
+Interpret creatively and make unexpected choices that feel genuinely designed for the context. No two designs should look the same. Vary between light and dark themes, different fonts, different aesthetics. Match implementation complexity to the aesthetic vision — maximalist designs need elaborate animations and effects, while minimalist designs need restraint, precision, and careful attention to spacing, typography, and subtle details. Don't hold back — commit fully to a distinctive vision and show what can truly be created when thinking outside the box.
 
 ### Styling Guidelines
 
