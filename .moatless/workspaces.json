@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "workspaces": [
+    {
+      "key": "default",
+      "codeExecution": { "setupCommands": ["bun install"] },
+      "scripts": [
+        {
+          "name": "preview",
+          "label": "Preview",
+          "command": "bun run dev",
+          "port": 5173,
+          "runOnStart": true
+        }
+      ]
+    }
+  ]
+}
