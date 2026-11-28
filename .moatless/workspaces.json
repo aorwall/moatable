@@ -3,7 +3,7 @@
   "workspaces": [
     {
       "key": "default",
-      "codeExecution": { "setupCommands": ["bun install"] },
+      "codeExecution": { "setupCommands": ["bun install --frozen-lockfile"] },
       "scripts": [
         {
           "name": "preview",

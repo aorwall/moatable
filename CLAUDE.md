@@ -16,19 +16,23 @@ This project is built with React, Vite, Tailwind CSS, and TypeScript. These are 
 
 ## Essential Commands
 
+Use the Node.js and Bun versions in [README.md](README.md).
+
 ```bash
+bun install --frozen-lockfile
+
 # Development
-bun dev          # Start dev server on http://localhost:5173
+bun run dev          # Start dev server on http://127.0.0.1:5173
 
 # Building
-bun build        # Type-check and build for production
-bun preview      # Preview production build
+bun run build        # Type-check and build for production
+bun run preview      # Serve the existing production build
 
 # Code Quality
-bun lint         # Run ESLint
-bun typecheck    # Run TypeScript type checking
-bun format       # Format code with Prettier
-bun format:check # Check code formatting
+bun run lint         # Run ESLint
+bun run typecheck    # Run TypeScript type checking
+bun run format       # Format code with Prettier
+bun run format:check # Check code formatting
 ```
 
 ## Working Philosophy
@@ -119,7 +123,7 @@ import { cn } from '@/lib/utils'
 
 ### Styling Philosophy
 
-The design system is paramount. Never write custom styles in components - always leverage and customize the design system through `index.css` and `tailwind.config.ts`.
+Customize the design system in `src/index.css`.
 
 ### Design System Best Practices
 
@@ -145,7 +149,7 @@ The design system is paramount. Never write custom styles in components - always
 
 5. **Color Function Matching**:
    - Always check CSS variable format before using
-   - Use HSL colors in `index.css` and `tailwind.config.ts`
+   - Use HSL colors in `src/index.css`
    - Match the color space format of existing variables
    - Create proper variants (shadcn outline variants are not transparent by default)
 
@@ -181,20 +185,19 @@ Interpret creatively and make unexpected choices that feel genuinely designed fo
 ### Styling Guidelines
 
 - Maximize component reusability
-- Leverage `index.css` and `tailwind.config.ts` for consistent design system
+- Reuse theme tokens from `src/index.css`
 - Create variants in reusable components
 - Customize shadcn components with proper variants
 - Consider design system when making any changes
 - Pay attention to contrast, color, and typography
 - Always generate responsive designs
-- Prioritize beautiful designs - edit `index.css` and `tailwind.config.ts` to avoid generic appearances
+- Set palette and design tokens in `src/index.css`
 - Implement correct styles for both dark and light modes
 
 ### Tailwind CSS Configuration
 
-- Tailwind CSS with custom theme configuration
-- CSS variables for theming (supports light/dark modes)
-- Design tokens defined in `tailwind.config.js` and `src/index.css`
+- Tailwind CSS 4 uses CSS-first configuration in `src/index.css`
+- The `@theme inline` block maps the light and dark CSS variables to Tailwind utilities
 
 ### SEO Best Practices
 
@@ -214,6 +217,6 @@ Automatically implement SEO best practices for every page and component:
 ## Important Notes
 
 - **No test framework is configured** - If tests are needed, consider adding Vitest for compatibility with Vite
-- Always run `bun typecheck` and `bun lint` before considering changes complete
+- Always run `bun run typecheck` and `bun run lint` before considering changes complete
 - The project uses ESM modules (note `"type": "module"` in package.json)
-- When adding new shadcn/ui components, use: `bun dlx shadcn@latest add [component-name]`
+- Add shadcn/ui components with `bunx shadcn@latest add <component>`

@@ -1,29 +1,24 @@
+import inspector from '@moatless/inspector/vite';
+import componentTagger from '@moatless/inspector/vite-tagger';
+import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
-import path from 'path';
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
-import componentTagger from "@moatless/tagger/vite";
-import inspector from "@moatless/inspector/vite";
 
-// https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ command, isPreview }) => ({
   plugins: [
     react(),
-    componentTagger(),
-    inspector()
+    tailwindcss(),
+    command === 'serve' && !isPreview && [componentTagger(), inspector()],
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
   server: {
-    host: '0.0.0.0',
-    port: Number(process.env.PORT) || 5173,
-    strictPort: false,
-    open: false,
-    allowedHosts: true,
+    host: '127.0.0.1',
+    port: 5173,
+    strictPort: true,
   },
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
-});
+}));

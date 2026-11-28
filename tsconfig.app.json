@@ -12,7 +12,9 @@
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
+    "tsBuildInfoFile": "./node_modules/.cache/tsconfig.app.tsbuildinfo",
     "jsx": "react-jsx",
+    "types": ["vite/client"],
 
     /* Linting */
     "strict": true,
@@ -21,7 +23,6 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Path resolution */
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
